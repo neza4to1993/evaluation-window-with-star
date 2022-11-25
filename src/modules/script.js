@@ -1,41 +1,12 @@
-const btn = document.querySelector('.feedback__btn');
-	btn.addEventListener('click', openWindow);
+document.querySelector ('.feedback__btn').addEventListener('click', openWindow);
 
-		const btnEstimation1 = document.getElementById('evaluationsItem1');
-		btnEstimation1.addEventListener('click', createStar);
-
-		const btnEstimation2 = document.getElementById('evaluationsItem2');
-		btnEstimation2.addEventListener('click', createStar);
-
-		const btnEstimation3 = document.getElementById('evaluationsItem3');
-		btnEstimation3.addEventListener('click', createStar);
-
-		const btnEstimation4 = document.getElementById('evaluationsItem4');
-		btnEstimation4.addEventListener('click', createStar);
-
-		const btnEstimation5 = document.getElementById('evaluationsItem5');
-		btnEstimation5.addEventListener('click', createStar);
-
-const btnStar = document.getElementById('star');
 const allOpen = document.getElementById('freeEva');
 
+document.querySelectorAll('.evaluations__estimation').forEach(element => {
+		element.addEventListener('click', createStar);
+	});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.getElementById('back').addEventListener('click', openWindow);
 
 
 function starCount() {
@@ -55,6 +26,7 @@ function openWindow() {
 			document.getElementById('feedback').style.display = 'flex';
 		}
 }
+
 
 
 function numberStar(number) {
@@ -92,10 +64,10 @@ function openBtn(numberBtn) {
 		if (numberBtn.getAttribute('open') === 'false' || numberBtn.getAttribute('open') === null) {
 			numberBtn.style.cssText = 
 			`
-				background-color: #fc7613;
-				width: 30px;
-				height: 30px;
-				font-size: 30px;
+ background-color: #fc7613;
+ width: 30px;
+ height: 30px;
+ font-size: 30px;
 			`
 			numberBtn.setAttribute('open', 'true');
 			allOpen.setAttribute('openBtn', 'true');
@@ -107,10 +79,10 @@ function openBtn(numberBtn) {
 function defaultBtn(element) {
 		element.style.cssText = 
 	`
-	width: 15px;
-	height: 15px;
-	font-size: 15px;
-	background-color: #262f38;
+ width: 15px;
+ height: 15px;
+ font-size: 15px;
+ background-color: #262f38;
 	`
 	element.setAttribute('open', 'false');
 	allOpen.setAttribute('openBtn', 'false');
@@ -118,7 +90,7 @@ function defaultBtn(element) {
 }
 
 function checkBtnNumberPressed(numberBtn) {
-	const allBtn = document.querySelector('.freedback__evaluations');
+	const allBtn = document.querySelector ('.freedback__evaluations');
 	const objBtn = {allBtn}.allBtn.children;
 		for (let i = 0; i < objBtn.length; i++) {
 			const element = objBtn[i];
