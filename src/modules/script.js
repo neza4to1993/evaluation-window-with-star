@@ -65,8 +65,9 @@ function openBtn(numberBtn) {
 			numberBtn.style.cssText = 
 			`
  background-color: #fc7613;
- width: 30px;
- height: 30px;
+ padding: 25px 32px;
+ max-width: 30px;
+ max-height: 30px;
  font-size: 30px;
 			`
 			numberBtn.setAttribute('open', 'true');
@@ -79,8 +80,9 @@ function openBtn(numberBtn) {
 function defaultBtn(element) {
 		element.style.cssText = 
 	`
- width: 15px;
- height: 15px;
+padding: 25px 30px;
+ max-width: 15px;
+ max-height: 15px;
  font-size: 15px;
  background-color: #262f38;
 	`
