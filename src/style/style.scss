@@ -19,6 +19,7 @@ body{
 	padding: 15px;
 }
 .body__content{
+	padding: 5px;
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -30,7 +31,7 @@ body{
 		flex-direction: column;
 		max-width: 375px;
 		background-color: #222933;
-		padding: 20px;
+		padding: 20px 20px 35px 20px;
 		border-radius: 10%;
 			.freedback__title {
 				color: #fff;
@@ -106,10 +107,9 @@ body{
 			font-family: 'Overpass', sans-serif;
 			font-weight: 400;
 			margin: auto;
-			width: 375px;
-			height: 350px;
+			max-width: 375px;
 			background-color: #222933;
-			padding: 20px;
+			padding: 20px 20px 35px 20px;
 			border-radius: 10%;
 			justify-content: center;
 			.feedbackout__header {
@@ -144,6 +144,7 @@ body{
 		  .previous {
 			background-color: #f1f1f1;
 			color: black;
+			margin: 5px 0px 0px 0px;
 		  }
 		}
 	}
